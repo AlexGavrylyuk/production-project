@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // "baseUrl": ".",
+    // esModuleInterop allows to use packages, that are use commonjs modules as import/ export modules.
+    "esModuleInterop": true,
+    // If any package doesn't have default export, we can use this option to import it as default. (It is instead of import * as packageName from 'packageName';)
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
