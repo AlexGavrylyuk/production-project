@@ -1,4 +1,11 @@
 {
+  "editor.formatOnSave": false,
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
   "cSpell.words": ["languagedetector"],
   "i18n-ally.localesPaths": ["public/locales"],
   "i18n-ally.pathMatcher": "{locale}/{namespaces}.json",
@@ -18,6 +25,7 @@
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
   }
 }
