@@ -1,0 +1,23 @@
+{
+  "cSpell.words": ["languagedetector"],
+  "i18n-ally.localesPaths": ["public/locales"],
+  "i18n-ally.pathMatcher": "{locale}/{namespaces}.json",
+  "i18n-ally.displayLanguage": "en",
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.enabledParsers": ["json"],
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.readOnly": false,
+  "i18n-ally.extract.autoDetect": true,
+  "i18n-ally.namespace": true,
+  "i18n-ally.defaultNamespace": "translation",
+  "stylelint.enable": true,
+  "css.validate": true,
+  "scss.validate": true,
+  "stylelint.validate": ["css", "scss"],
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  }
+}
