@@ -2,5 +2,9 @@
   "Test translation": "Тестовый перевод",
   "Translate": "Перевод",
   "Language": "Русский",
-  "Main page": "Главная страница"
+  "Main page": "Главная страница",
+  "Page not found": "Страница не найдена",
+  "Something went wrong": "Что-то пошло не так",
+  "Refresh page": "Обновить страницу",
+  "Throw error": "Ошибка выброса"
 }
