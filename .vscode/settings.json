@@ -1,4 +1,6 @@
 {
+  "files.insertFinalNewline": false,
+  "files.trimFinalNewlines": true,
   "editor.formatOnSave": false,
   "[typescript]": {
     "editor.formatOnSave": false
@@ -25,7 +27,7 @@
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.stylelint": "always",
+    "source.fixAll.eslint": "always"
   }
 }
