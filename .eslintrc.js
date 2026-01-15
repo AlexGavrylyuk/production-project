@@ -35,7 +35,13 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'comma-dangle': 'off',
     'arrow-body-style': 'off',
-    'i18next/no-literal-string': ['warn', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
+    'i18next/no-literal-string': [
+      'warn',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid', 'to']
+      }
+    ],
     'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   globals: {
