@@ -4,7 +4,6 @@ import { Suspense } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/navbar';
 import { Sidebar } from 'widgets/sidebar';
-import './styles/index.scss';
 
 const App = () => {
   const { theme } = useTheme();
