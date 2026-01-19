@@ -3,6 +3,7 @@
   "rules": {
     "indentation": 2,
     "selector-class-pattern": null,
-    "number-max-precision": null
+    "number-max-precision": null,
+    "block-no-empty": [true, { "severity": "warning" }]
   }
 }
