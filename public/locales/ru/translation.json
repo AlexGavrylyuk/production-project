@@ -10,5 +10,7 @@
   "About": "О сайте",
   "Main": "Главная",
   "Short language": "RU",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Enter username": "Введите username",
+  "Enter password": "Введите пароль"
 }

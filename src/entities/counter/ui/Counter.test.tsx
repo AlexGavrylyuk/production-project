@@ -8,6 +8,7 @@ const initialState: StateSchema = {
   counter: {
     value: 10,
   },
+  user: {},
 };
 
 describe('Counter', () => {
