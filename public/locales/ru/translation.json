@@ -12,5 +12,8 @@
   "Short language": "RU",
   "Login": "Войти",
   "Enter username": "Введите username",
-  "Enter password": "Введите пароль"
+  "Enter password": "Введите пароль",
+  "Logout": "Выйти",
+  "Authorization form": "Форма авторизации",
+  "Login form error": "Неверное имя пользователя или пароль"
 }

@@ -12,5 +12,8 @@
   "Short language": "EN",
   "Login": "Login",
   "Enter username": "Enter username",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Authorization form": "Authorization form",
+  "Login form error": "Username or password is incorrect",
+  "Logout": "Logout"
 }
