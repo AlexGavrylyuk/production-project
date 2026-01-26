@@ -30,6 +30,20 @@ export const Navbar: FC<NavbarProps> = (props) => {
     dispatch(userActions.logout());
   }, [dispatch]);
 
+  if (authData) {
+    return (
+      <div className={classNames(cls.Navbar, {}, [className])}>
+        <Button
+          className={cls.links}
+          theme={ButtonTheme.CLEAR_INVERTED}
+          onClick={onLogout}
+        >
+          {t('Logout')}
+        </Button>
+      </div>
+    );
+  }
+
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <Button
@@ -37,9 +51,9 @@ export const Navbar: FC<NavbarProps> = (props) => {
         theme={ButtonTheme.CLEAR_INVERTED}
         onClick={authData ? onLogout : onOpenModal}
       >
-        {authData ? t('Logout') : t('Login')}
+        {t('Login')}
       </Button>
-      {!authData && <LoginModal isOpen={isAuthModalOpen} onClose={onCloseModal} />}
+      {isAuthModalOpen && <LoginModal isOpen={isAuthModalOpen} onClose={onCloseModal} />}
     </div>
   );
 };
