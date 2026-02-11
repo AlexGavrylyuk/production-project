@@ -1,23 +1,19 @@
-import { FC, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import AboutIcon from 'shared/assets/icons/about-20-20.svg';
-import MainIcon from 'shared/assets/icons/main-20-20.svg';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { memo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/appLink/AppLink';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/button/Button';
 import { LangSwitcher } from 'widgets/langSwitcher';
+import { SidebarItemsList } from 'widgets/sidebar/model/items';
 import { ThemeSwitcher } from 'widgets/themeSwitcher';
+import { SidebarItem } from '../sidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = (props) => {
+export const Sidebar = memo((props: SidebarProps) => {
   const { className } = props;
   const [collapsed, setCollapsed] = useState(false);
-  const { t } = useTranslation();
 
   const onToggle = () => {
     setCollapsed((prev) => !prev);
@@ -39,14 +35,9 @@ export const Sidebar: FC<SidebarProps> = (props) => {
         {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.items}>
-        <AppLink to={RoutePath.main} theme={AppLinkTheme.PRIMARY} className={cls.item}>
-          <MainIcon className={cls.icon} />
-          <span className={cls.link}>{t('Main')}</span>
-        </AppLink>
-        <AppLink to={RoutePath.about} theme={AppLinkTheme.PRIMARY} className={cls.item}>
-          <AboutIcon className={cls.icon} />
-          <span className={cls.link}>{t('About')}</span>
-        </AppLink>
+        {SidebarItemsList.map((item) => (
+          <SidebarItem key={item.path} item={item} collapsed={collapsed} />
+        ))}
       </div>
       <div className={cls.switchers}>
         <ThemeSwitcher />
@@ -54,4 +45,6 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       </div>
     </div>
   );
-};
+});
+
+Sidebar.displayName = 'Sidebar';

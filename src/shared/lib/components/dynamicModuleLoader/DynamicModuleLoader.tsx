@@ -24,7 +24,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
     Object.entries(reducers).forEach(([name, reducer]: ReducersListEntry) => {
       // Add async reducer to the store
       store.reducerManager.add(name, reducer);
-      dispatch({ type: '@INIT loginForm reducer' });
+      dispatch({ type: `@INIT ${name} reducer` });
     });
 
     return () => {
@@ -32,7 +32,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
       if (removeAfterUnmount) {
         Object.entries(reducers).forEach(([name]: ReducersListEntry) => {
           store.reducerManager.remove(name);
-          dispatch({ type: '@DESTROY loginForm reducer' });
+          dispatch({ type: `@DESTROY ${name} reducer` });
         });
       }
     };

@@ -1,5 +1,5 @@
 import { Theme, useTheme } from 'app/providers/themeProvider';
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, memo } from 'react';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -9,7 +9,7 @@ interface ThemeSwitcherProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
+export const ThemeSwitcher = memo((props: ThemeSwitcherProps) => {
   const { className, ...restProps } = props;
   const { theme, toggleTheme } = useTheme();
 
@@ -25,4 +25,6 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
       {isDark ? <DarkIcon /> : <LightIcon />}
     </Button>
   );
-};
+});
+
+ThemeSwitcher.displayName = 'ThemeSwitcher';
