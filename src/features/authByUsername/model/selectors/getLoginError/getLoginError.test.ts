@@ -18,6 +18,6 @@ describe('getLoginError.test', () => {
       loginForm: {},
     };
 
-    expect(getLoginError(state as StateSchema)).toEqual(undefined);
+    expect(getLoginError(state as StateSchema)).toEqual('');
   });
 });
